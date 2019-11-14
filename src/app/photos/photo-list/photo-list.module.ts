@@ -6,6 +6,7 @@ import { LoadButtonComponent } from './load-button/load-button.component';
 import { PhotoListComponent } from './photo-list.component';
 import { PhotosComponent } from './photos/photos.component';
 import { PhotoModule } from '../photo/photo.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,7 @@ import { PhotoModule } from '../photo/photo.module';
         PhotoListComponent,
         PhotosComponent
     ],
-    imports: [CommonModule, PhotoModule]
+    imports: [CommonModule, PhotoModule, SharedModule]
 })
 export class PhotoListModule {
 
