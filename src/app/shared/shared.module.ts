@@ -3,8 +3,7 @@ import { NgModule } from '@angular/core';
 import { CardModule } from './components/card/card.module';
 
 @NgModule({
-    imports: [CardModule]
+    imports: [CardModule],
+    exports: [CardModule]
 })
-export class SharedModule {
-
-}
+export class SharedModule { }

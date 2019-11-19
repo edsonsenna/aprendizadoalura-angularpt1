@@ -7,15 +7,18 @@ import { PhotoListComponent } from './photo-list.component';
 import { PhotosComponent } from './photos/photos.component';
 import { PhotoModule } from '../photo/photo.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { SearchComponent } from './search/search.component';
+import { DarkOnHoverModule } from 'src/app/shared/directives/dark-on-hover/dark-on-hover.module';
 
 @NgModule({
     declarations: [
         FilterByDescriptionPipe,
         LoadButtonComponent,
         PhotoListComponent,
-        PhotosComponent
+        PhotosComponent,
+        SearchComponent
     ],
-    imports: [CommonModule, PhotoModule, SharedModule]
+    imports: [CommonModule, PhotoModule, SharedModule, DarkOnHoverModule]
 })
 export class PhotoListModule {
 

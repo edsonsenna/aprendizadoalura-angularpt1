@@ -8,6 +8,4 @@ import { CardComponent } from './card.component';
     exports: [CardComponent],
     imports: [CommonModule]
 })
-export class CardModule {
-
-}
+export class CardModule { }
