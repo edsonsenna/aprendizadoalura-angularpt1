@@ -1,18 +1,16 @@
 <h4 class="text-center">Login</h4>
 
-<form [formGroup]="loginForm" class="form mt-4">
+<form [formGroup]="loginForm" class="form mt-4" (submit)="login()">
 
     <div class="form-group">
         <input 
             class="form-control" 
             placeholder="user name"
             formControlName="userName" 
-            autofocus>  
-        <small
+            autofocus>
+        <ap-vmessage
             *ngIf="loginForm.get('userName').errors?.required"
-            class="text-danger d-block mt-2">
-            User name is required!
-        </small>
+            text="User name is required"></ap-vmessage>  
     </div>
 
     <div class="form-group">
@@ -22,14 +20,13 @@
             placeholder="password"
             formControlName="password">
             
-        <small
+            <ap-vmessage
             *ngIf="loginForm.get('password').errors?.required"
-            class="text-danger d-block mt-2">
-            Password is required!
-         </small>          
+            text="Password is required"></ap-vmessage>            
     </div>
 
-    <button 
+    <button
+        [disabled]="loginForm.invalid"
         type="submit" 
         class="btn btn-primary btn-block">
         login
